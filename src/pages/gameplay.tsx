@@ -5,6 +5,7 @@ import * as THREE from "three";
 
 const Gameplay = () => {
   const [video] = React.useState(() => {
+    if (typeof document === "undefined") return;
     const vid = document.createElement("video")
     vid.src = "https://cdn.discordapp.com/attachments/902872036844666900/980063916484857896/noot.mp4"
     vid.crossOrigin = "Anonymous"
